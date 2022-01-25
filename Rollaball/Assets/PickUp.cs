@@ -14,7 +14,8 @@ public class PickUp : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            gameObject.SetActive(false);
+            ScoreCounter.Score++;
+            Destroy(gameObject);
         }
     }
 }
