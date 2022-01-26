@@ -3,14 +3,17 @@ using TMPro;
 
 public class MissionManager : MonoBehaviour
 {
-    public static int GoldScore;
-    public static int RubyScore;
     public static bool goldCollected = false;
     public static bool rubyCollected = false;
 
+    public static int GoldScore;
+    public static int RubyScore;
+
+    public GameObject player;
     public TextMeshProUGUI goldUI;
     public TextMeshProUGUI buttonUI;
     public TextMeshProUGUI rubyUI;
+    public TextMeshProUGUI finalQuestUI;
 
     private int goldCount;
     private int rubyCount;
@@ -22,14 +25,19 @@ public class MissionManager : MonoBehaviour
     }
     private void Update()
     {
+        UpdateUI();
+    }
+    private void UpdateUI()
+    {
         UpdateScoreUI();
         UpdateButtonUI();
+        UpdateFinalQuestUI();
     }
     private void UpdateButtonUI()
     {
         if (ButtonBox.buttonPressed)
         {
-            buttonUI.text = "<s>2. Press the Button<s>";
+            buttonUI.text = "<s>2. Activate the portal<s>";
             buttonUI.color = new Color32(200, 200, 200, 255);
         }
     }
@@ -55,6 +63,16 @@ public class MissionManager : MonoBehaviour
             rubyCollected = true;
             rubyUI.text = $"<s>3. Ruby: {RubyScore} / {rubyCount}<s>";
             rubyUI.color = new Color32(200, 200, 200, 255);
+        }
+    }
+    private void UpdateFinalQuestUI()
+    {
+        if (!player.activeInHierarchy)
+        {
+            finalQuestUI.text = "<s>4. Sacrifice yourself<s>";
+            finalQuestUI.color = new Color32(200, 200, 200, 255);
+
+
         }
     }
 }

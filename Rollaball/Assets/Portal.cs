@@ -30,7 +30,9 @@ public class Portal : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             other.transform.position = newTeleportPos.transform.position;
-            Instantiate(portalEffect, other.transform.position, other.transform.rotation);
+
+            GameObject effect = (GameObject)Instantiate(portalEffect, other.transform.position, other.transform.rotation);
+            Destroy(effect, 3f);
         }
     }
 }
