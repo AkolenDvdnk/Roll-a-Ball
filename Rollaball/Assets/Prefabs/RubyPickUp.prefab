@@ -59,7 +59,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 2249f556c3061a845b0575edb917af9f, type: 2}
+  - {fileID: 2100000, guid: 09b601493422a7c48aaa57fe16da397f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -111,8 +111,8 @@ GameObject:
   - component: {fileID: -1810350570735309368}
   - component: {fileID: 5137647264761021741}
   m_Layer: 0
-  m_Name: GoldPickUp
-  m_TagString: Gold
+  m_Name: RubyPickUp
+  m_TagString: Ruby
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -158,7 +158,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 2249f556c3061a845b0575edb917af9f, type: 2}
+  - {fileID: 2100000, guid: 09b601493422a7c48aaa57fe16da397f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -220,4 +220,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14aabad3e1bf7914b8550dc18427eee5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pickUpType: 0
+  pickUpType: 1

@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PortalSubstance : MonoBehaviour
+public class Portal : MonoBehaviour
 {
     public GameObject fence;
     public GameObject newTeleportPos;
+    public GameObject portalEffect;
 
     private Animator fenceAnimator;
 
@@ -29,6 +30,7 @@ public class PortalSubstance : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             other.transform.position = newTeleportPos.transform.position;
+            Instantiate(portalEffect, other.transform.position, other.transform.rotation);
         }
     }
 }

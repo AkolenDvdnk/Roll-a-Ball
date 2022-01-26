@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Wall : MonoBehaviour
 {
@@ -12,9 +10,9 @@ public class Wall : MonoBehaviour
     }
     private void Update()
     {
-        if (ScoreCounter.goldCollected)
+        if (MissionManager.goldCollected)
         {
-            animator.SetTrigger("Collected");
+            animator.SetBool("Collected", MissionManager.goldCollected);
         }
     }
 }

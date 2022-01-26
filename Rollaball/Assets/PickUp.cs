@@ -21,7 +21,12 @@ public class PickUp : MonoBehaviour
     {
         if (other.CompareTag("Player") && pickUpType.ToString() == "gold")
         {
-            ScoreCounter.GoldScore++;
+            MissionManager.GoldScore++;
+            Destroy(gameObject);
+        }
+        if (other.CompareTag("Player") && pickUpType.ToString() == "ruby")
+        {
+            MissionManager.RubyScore++;
             Destroy(gameObject);
         }
     }
