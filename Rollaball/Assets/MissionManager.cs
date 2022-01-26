@@ -10,6 +10,7 @@ public class MissionManager : MonoBehaviour
     public static int RubyScore;
 
     public GameObject player;
+    public GameObject endGameUI;
     public TextMeshProUGUI goldUI;
     public TextMeshProUGUI buttonUI;
     public TextMeshProUGUI rubyUI;
@@ -72,7 +73,7 @@ public class MissionManager : MonoBehaviour
             finalQuestUI.text = "<s>4. Sacrifice yourself<s>";
             finalQuestUI.color = new Color32(200, 200, 200, 255);
 
-
+            endGameUI.SetActive(true);
         }
     }
 }
