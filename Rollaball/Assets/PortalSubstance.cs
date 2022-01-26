@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Portal : MonoBehaviour
+public class PortalSubstance : MonoBehaviour
 {
     public GameObject fence;
     public GameObject newTeleportPos;
+
     private Animator fenceAnimator;
 
     private void Awake()

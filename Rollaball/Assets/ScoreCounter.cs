@@ -3,8 +3,9 @@ using TMPro;
 
 public class ScoreCounter : MonoBehaviour
 {
-    public static int Score;
-    public static bool Collected = false;
+    public static int GoldScore;
+    public static bool goldCollected = false;
+    public static bool rubyCollected = false;
 
     public TextMeshProUGUI scoreUI;
 
@@ -20,14 +21,14 @@ public class ScoreCounter : MonoBehaviour
     }
     private void UpdateScoreUI()
     {
-        if (Score < pickUpsCount)
+        if (GoldScore < pickUpsCount)
         {
-            scoreUI.text = $"1. Score: {Score} / {pickUpsCount}";
+            scoreUI.text = $"1. Score: {GoldScore} / {pickUpsCount}";
         }
         else 
         {
-            Collected = true;
-            scoreUI.text = $"<s>1. Score: {Score} / {pickUpsCount}<s>";
+            goldCollected = true;
+            scoreUI.text = $"<s>1. Score: {GoldScore} / {pickUpsCount}<s>";
             scoreUI.color = new Color32(200, 200, 200, 255);
         }
     }

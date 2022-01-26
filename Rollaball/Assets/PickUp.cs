@@ -1,7 +1,14 @@
 ﻿using UnityEngine;
 
+public enum PickUpType
+{
+    gold,
+    ruby
+}
 public class PickUp : MonoBehaviour
 {
+    public PickUpType pickUpType;
+
     private void Update()
     {
         Rotate();
@@ -12,9 +19,9 @@ public class PickUp : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") && pickUpType.ToString() == "gold")
         {
-            ScoreCounter.Score++;
+            ScoreCounter.GoldScore++;
             Destroy(gameObject);
         }
     }

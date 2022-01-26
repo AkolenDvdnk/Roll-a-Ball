@@ -12,7 +12,7 @@ public class Wall : MonoBehaviour
     }
     private void Update()
     {
-        if (ScoreCounter.Collected)
+        if (ScoreCounter.goldCollected)
         {
             animator.SetTrigger("Collected");
         }
